@@ -1,0 +1,32 @@
+@use '../abstracts/breakpoints' as *;
+@use '../abstracts/colors' as *;
+
+.image {
+    width: 100%;
+    &-container {
+        padding-top: 50px;
+        &--item {
+            & .email {
+                margin: 10px 0px;
+            }
+            & .image {
+                margin-bottom: 5px;
+            }
+        }
+    }
+    &-random { //test make sure to change
+        @extend .image;
+    }
+}
+
+@media (min-width: map-get($breakpoints, 'sm')) {
+    .image {
+        width: 90%;
+    }
+}
+
+@media (min-width: map-get($breakpoints, 'xl')) {
+    .image {
+        max-width: 1280px;
+    }
+}

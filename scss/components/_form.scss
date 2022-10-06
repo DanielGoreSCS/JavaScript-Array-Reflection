@@ -1,0 +1,32 @@
+@use '../abstracts/breakpoints' as *;
+@use '../abstracts/colors' as *;
+.form {
+    &-control {
+        width: 600px;
+        height: 50px;
+        background-color: $grey-light;
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
+        margin-top: 17px;
+        box-sizing: border-box;
+    }
+}
+.required {
+    color: $error;
+}
+
+@media (max-width: map-get($breakpoints, 'sm')) {
+    .form {
+        &-control {
+            width: 375px;
+            height: 50px;
+            background-color: $grey-light;
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+            margin-top: 17px;
+            box-sizing: border-box;
+        }
+    }
+}

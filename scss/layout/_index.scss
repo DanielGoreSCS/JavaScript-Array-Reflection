@@ -1,0 +1,20 @@
+@use '../abstracts/breakpoints' as *;
+@use '../abstracts/colors' as *;
+
+@use '../layout/content';
+@use '../layout/header';
+
+.header {
+    grid-area: header;
+}
+
+.content {
+    grid-area: content;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-areas:
+    "header"
+    "content";
+}

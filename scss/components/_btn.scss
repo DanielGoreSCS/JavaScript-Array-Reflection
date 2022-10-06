@@ -1,0 +1,33 @@
+@use '../abstracts/breakpoints' as *;
+@use '../abstracts/colors' as *;
+
+.btn {
+    font-size: 1.063rem;
+    line-height: 35px;
+    transition: 0.2s ease;
+    padding: 15px 50px;
+    background-color: $grey-light;
+    border: 2px solid darken($grey-light, 20%);
+    border-radius: 5px;
+    &:hover {
+        background: darken($grey-light, 10%);
+        cursor: pointer;
+    }
+    &--new {
+        //
+        @extend .btn;
+    }
+    &--view {
+        // 
+        @extend .btn;
+    }
+    &--form {
+        @extend .btn;
+    }
+}
+
+@media (max-width: map-get($breakpoints, 'sm')) {
+    .options > * {
+        padding: 15px 5px;
+    }
+}

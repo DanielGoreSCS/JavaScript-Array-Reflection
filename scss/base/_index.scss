@@ -1,0 +1,11 @@
+@use '../abstracts/colors' as *;
+@use '../abstracts/fonts' as *;
+* {
+    margin: 0;
+    font-family: $fonts;
+    color: $text;
+}
+
+a {
+    text-decoration: none;
+}

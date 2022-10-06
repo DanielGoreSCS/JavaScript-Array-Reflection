@@ -1,0 +1,118 @@
+@use '../abstracts/breakpoints' as *;
+.row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: $gutter;
+    align-content: center;
+}
+.col {
+    &-4 {
+        flex-grow: 1;
+        width: calc(33% - $gutter);
+    }
+    &-6 {
+        flex-grow: 1;
+        width: calc(49% - $gutter);
+    }
+    &-8 {
+        flex-grow: 1;
+        width: calc(66% - $gutter);
+    }
+    &-12 {
+        flex-grow: 1;
+        width: 100%;
+    }
+}
+
+@media (min-width: map-get($breakpoints, 'sm')) {
+    .row {
+        flex-direction: row;
+    }
+    .col {
+        &-sm {
+            &-4 {
+                flex-grow: 1;
+                width: calc(33% - $gutter);
+            }
+            &-6 {
+                flex-grow: 1;
+                width: calc(49% - $gutter);
+            }
+            &-8 {
+                flex-grow: 1;
+                width: calc(66% - $gutter);
+            }
+            &-12 {
+                flex-grow: 1;
+                width: 100%;
+            }
+        }
+    }
+}
+@media (min-width: map-get($breakpoints, 'md')) {
+    .col {
+        &-md {
+            &-4 {
+                flex-grow: 1;
+                width: calc(33% - $gutter);
+            }
+            &-6 {
+                flex-grow: 1;
+                width: calc(49% - $gutter);
+            }
+            &-8 {
+                flex-grow: 1;
+                width: calc(66% - $gutter);
+            }
+            &-12 {
+                flex-grow: 1;
+                width: 100%;
+            }
+        }
+    }
+}
+@media (min-width: map-get($breakpoints, 'lg')) {
+    .col {
+        &-lg {
+            &-4 {
+                flex-grow: 1;
+                width: calc(33% - $gutter);
+            }
+            &-6 {
+                flex-grow: 1;
+                width: calc(49% - $gutter);
+            }
+            &-8 {
+                flex-grow: 1;
+                width: calc(66% - $gutter);
+            }
+            &-12 {
+                flex-grow: 1;
+                width: 100%;
+            }
+        }
+    }
+}
+@media (min-width: map-get($breakpoints, 'xl')) {
+    .col {
+        &-xl {
+            &-4 {
+                flex-grow: 1;
+                width: calc(33% - $gutter);
+            }
+            &-6 {
+                flex-grow: 1;
+                width: calc(49% - $gutter);
+            }
+            &-8 {
+                flex-grow: 1;
+                width: calc(66% - $gutter);
+            }
+            &-12 {
+                flex-grow: 1;
+                width: 100%;
+            }
+        }
+    }
+}
