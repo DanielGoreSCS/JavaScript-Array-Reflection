@@ -9,19 +9,19 @@
 .col {
     &-4 {
         flex-grow: 1;
-        width: calc(33% - $gutter);
+        max-width: calc(33% - $gutter);
     }
     &-6 {
         flex-grow: 1;
-        width: calc(49% - $gutter);
+        max-width: calc(49% - $gutter);
     }
     &-8 {
         flex-grow: 1;
-        width: calc(66% - $gutter);
+        max-width: calc(66% - $gutter);
     }
     &-12 {
         flex-grow: 1;
-        width: 100%;
+        max-width: 100%;
     }
 }
 
@@ -33,19 +33,19 @@
         &-sm {
             &-4 {
                 flex-grow: 1;
-                width: calc(33% - $gutter);
+                max-width: calc(33% - $gutter);
             }
             &-6 {
                 flex-grow: 1;
-                width: calc(49% - $gutter);
+                max-width: calc(49% - $gutter);
             }
             &-8 {
                 flex-grow: 1;
-                width: calc(66% - $gutter);
+                max-width: calc(66% - $gutter);
             }
             &-12 {
                 flex-grow: 1;
-                width: 100%;
+                max-width: 100%;
             }
         }
     }
@@ -55,19 +55,19 @@
         &-md {
             &-4 {
                 flex-grow: 1;
-                width: calc(33% - $gutter);
+                max-width: calc(33% - $gutter);
             }
             &-6 {
                 flex-grow: 1;
-                width: calc(49% - $gutter);
+                max-width: calc(49% - $gutter);
             }
             &-8 {
                 flex-grow: 1;
-                width: calc(66% - $gutter);
+                max-width: calc(66% - $gutter);
             }
             &-12 {
                 flex-grow: 1;
-                width: 100%;
+                max-width: 100%;
             }
         }
     }
@@ -77,19 +77,19 @@
         &-lg {
             &-4 {
                 flex-grow: 1;
-                width: calc(33% - $gutter);
+                max-width: calc(33% - $gutter);
             }
             &-6 {
                 flex-grow: 1;
-                width: calc(49% - $gutter);
+                max-width: calc(49% - $gutter);
             }
             &-8 {
                 flex-grow: 1;
-                width: calc(66% - $gutter);
+                max-width: calc(66% - $gutter);
             }
             &-12 {
                 flex-grow: 1;
-                width: 100%;
+                max-width: 100%;
             }
         }
     }
@@ -99,19 +99,19 @@
         &-xl {
             &-4 {
                 flex-grow: 1;
-                width: calc(33% - $gutter);
+                max-width: calc(33% - $gutter);
             }
             &-6 {
                 flex-grow: 1;
-                width: calc(49% - $gutter);
+                max-width: calc(49% - $gutter);
             }
             &-8 {
                 flex-grow: 1;
-                width: calc(66% - $gutter);
+                max-width: calc(66% - $gutter);
             }
             &-12 {
                 flex-grow: 1;
-                width: 100%;
+                max-width: 100%;
             }
         }
     }

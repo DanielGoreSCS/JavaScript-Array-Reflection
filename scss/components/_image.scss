@@ -4,7 +4,7 @@
 .image {
     width: 100%;
     &-container {
-        padding-top: 50px;
+        padding-top: 30px;
         &--item {
             & .email {
                 margin: 10px 0px;
@@ -17,6 +17,14 @@
     &-random { //test make sure to change
         @extend .image;
     }
+}
+
+.carousel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: $gutter;
+    align-content: center;
 }
 
 @media (min-width: map-get($breakpoints, 'sm')) {

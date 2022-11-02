@@ -1,33 +1,43 @@
 @use '../abstracts/breakpoints' as *;
 @use '../abstracts/colors' as *;
 
+@mixin btn-color($color) {
+    background-color: $color;
+    border: 2px solid darken($color, 20%);
+    outline: darken($color, 20%) 5px solid;
+    outline-offset: -5px;
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        background: darken($color, 10%);
+        cursor: pointer;
+    }
+}
+
 .btn {
     font-size: 1.063rem;
     line-height: 35px;
     transition: 0.2s ease;
     padding: 15px 50px;
-    background-color: $grey-light;
-    border: 2px solid darken($grey-light, 20%);
     border-radius: 5px;
-    &:hover {
-        background: darken($grey-light, 10%);
-        cursor: pointer;
-    }
+    @include btn-color($grey-light);
     &--new {
         //
         @extend .btn;
+        @include btn-color($grey);
     }
     &--view {
         // 
         @extend .btn;
+        @include btn-color($grey);
     }
-    &--form {
+    &--submit {
         @extend .btn;
+        @include btn-color($submit);
+    }
+    &--reset {
+        @extend .btn;
+        @include btn-color($reset);
     }
 }
 
-@media (max-width: map-get($breakpoints, 'sm')) {
-    .options > * {
-        padding: 15px 5px;
-    }
-}

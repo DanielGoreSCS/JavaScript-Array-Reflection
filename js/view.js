@@ -18,15 +18,15 @@ window.onload = () => {
                 <div class="image-container--item">
                 <h2 class="email">${data[i]["email"]}</h2>
                 <div class="carousel">
-                <div>
+                <div class="col-6 col-lg-4">
                 <img class="image" src="${data[i]["image"]}" alt="Saved Image">
                 </div>
                 `);
                 old_email = data[i]["email"];
             }
             else if (old_email == data[i]["email"]) {
-                $(".carousel:last-child").append(`
-                <div>
+                $(".image-container--item:last-child .carousel:last-child").append(`
+                <div class="col-6 col-lg-4">
                 <img class="image" src="${data[i]["image"]}" alt="Saved Image">
                 </div>
                 `);
@@ -38,7 +38,7 @@ window.onload = () => {
                 <div class="image-container--item">
                 <h2 class="email">${data[i]["email"]}</h2>
                 <div class="carousel">
-                <div>
+                <div class="col-6 col-lg-4">
                 <img class="image" src="${data[i]["image"]}" alt="Saved Image">
                 </div>
                 `);

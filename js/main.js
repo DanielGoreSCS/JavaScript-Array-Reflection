@@ -60,6 +60,14 @@ function validateForm(event) {
         
         //fetch old data and add new data
         let old_data = JSON.parse(sessionStorage.getItem("linkedItems"));
+        for (data in old_data) {
+            if (old_data[data]["email"] == newItem["email"]) {
+                if (old_data[data]["image"] == newItem["image"]) {
+                    addAlert("Image Already Linked", "The same image cannot be linked to the same email.")
+                    return;
+                }
+            }
+        }
         old_data.push(newItem);
         
         //Change old_data into a JSON string and save it to session storage as linkedItems
@@ -78,10 +86,15 @@ function generateImage() {
     `);
 }
 
-$(".btn--view").on("click", () => {
-    let history = sessionStorage.getItem("linkedItems");
-    console.log(history);
-})
+function addAlert(title, message) {
+    $(".wrapper").append(`
+    <div class="alert">
+        <h2>${title}</h2>
+        <p>${message}</p>
+    <div>
+    `);
+    setTimeout(() => $(".alert")[0].remove(), 5000);
+}
 
 window.onload = () => {
     generateImage();
