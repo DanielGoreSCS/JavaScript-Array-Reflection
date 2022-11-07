@@ -52,32 +52,12 @@ body {
   transition: 0.2s ease;
   padding: 15px 50px;
   border-radius: 5px;
-  background-color: lightgrey;
-  border: 2px solid #a0a0a0;
-  outline: #a0a0a0 5px solid;
+  background-color: #666;
+  border: 2px solid #333333;
+  outline: #333333 5px solid;
   outline-offset: -5px;
 }
 .btn:hover, .btn--reset:hover, .btn--submit:hover, .btn--view:hover, .btn--new:hover, .btn:focus, .btn--reset:focus, .btn--submit:focus, .btn--view:focus, .btn--new:focus, .btn:focus-visible, .btn--reset:focus-visible, .btn--submit:focus-visible, .btn--view:focus-visible, .btn--new:focus-visible {
-  background: #bababa;
-  cursor: pointer;
-}
-.btn--new {
-  background-color: #666;
-  border: 2px solid #333333;
-  outline: #333333 5px solid;
-  outline-offset: -5px;
-}
-.btn--new:hover, .btn--new:focus, .btn--new:focus-visible {
-  background: #4d4d4d;
-  cursor: pointer;
-}
-.btn--view {
-  background-color: #666;
-  border: 2px solid #333333;
-  outline: #333333 5px solid;
-  outline-offset: -5px;
-}
-.btn--view:hover, .btn--view:focus, .btn--view:focus-visible {
   background: #4d4d4d;
   cursor: pointer;
 }
@@ -243,6 +223,7 @@ body {
   flex-wrap: wrap;
   gap: 20px;
   align-content: center;
+  justify-content: center;
 }
 
 @media (min-width: 576px) {

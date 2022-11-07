@@ -20,16 +20,13 @@
     transition: 0.2s ease;
     padding: 15px 50px;
     border-radius: 5px;
-    @include btn-color($grey-light);
+    @include btn-color($btn);
     &--new {
-        //
         @extend .btn;
-        @include btn-color($grey);
     }
     &--view {
-        // 
+
         @extend .btn;
-        @include btn-color($grey);
     }
     &--submit {
         @extend .btn;

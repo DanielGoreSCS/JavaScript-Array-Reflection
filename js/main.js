@@ -15,22 +15,24 @@ function validateForm(event) {
     const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     let errorCount = 0;
     for (let i = 0; i < $form.length; i++) {
+        $input = $form[i].value;
+        $input.replace(/\s/g, "");
         if ($form[i].required) {
             //If form field empty
-            if ($form[i].value === "") {
+            if ($input === "") {
                 //Call setError
                 errorCount += 1;
                 setError(i, "Please enter your email address");
             }
             else if ($($form[i]).attr("id") === "email") {
-                if (emailRegex.test($form[i].value) !== true) {
+                if (emailRegex.test($input) !== true) {
                     //Call setError
                     errorCount += 1;
                     if ($form[i].validationMessage !== "") {
                         setError(i, $form[i].validationMessage);
                     }
                     else {
-                        setError(i, `Please enter a part following '${$form[i].value}'. E.G. '.com'.`)
+                        setError(i, `Please enter a part following '${$input}'. E.G. '.com'.`)
                     }
                 }
                 else {
